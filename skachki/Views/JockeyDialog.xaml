@@ -1,0 +1,38 @@
+<Window x:Class="skachki.Views.JockeyDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Жокей" Height="240" Width="320"
+        ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Имя:"     Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtFirst" Grid.Row="0" Grid.Column="1" Margin="0,4"/>
+
+        <Label Content="Фамилия:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtLast"  Grid.Row="1" Grid.Column="1" Margin="0,4"/>
+
+        <Label Content="Возраст:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtAge"   Grid.Row="2" Grid.Column="1" Margin="0,4"/>
+
+        <Label Content="Страна:"  Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="txtCountry" Grid.Row="3" Grid.Column="1" Margin="0,4"/>
+
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="2"
+                    Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
+            <Button Content="ОК"     Width="80" Margin="0,0,6,0" Click="OK_Click"/>
+            <Button Content="Отмена" Width="80" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
